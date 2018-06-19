@@ -12,6 +12,7 @@
 		83FCE4A720D940E700B37D56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83FCE4A520D940E700B37D56 /* Main.storyboard */; };
 		83FCE4A920D940E900B37D56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83FCE4A820D940E900B37D56 /* Assets.xcassets */; };
 		83FCE4AC20D940E900B37D56 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83FCE4AA20D940E900B37D56 /* LaunchScreen.storyboard */; };
+		83FCE4B720D9605500B37D56 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83FCE4B520D9605400B37D56 /* SWRevealViewController.m */; };
 		B7F2EC7A16ACF9D8F494369B /* Pods_Chat_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C978EB02E618F3D9CD10F8AA /* Pods_Chat_App.framework */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +24,9 @@
 		83FCE4A820D940E900B37D56 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		83FCE4AB20D940E900B37D56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		83FCE4AD20D940E900B37D56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83FCE4B420D9605300B37D56 /* Chat App-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Chat App-Bridging-Header.h"; sourceTree = "<group>"; };
+		83FCE4B520D9605400B37D56 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		83FCE4B620D9605400B37D56 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		9F63A8EF1345111866E6AD23 /* Pods-Chat App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chat App.release.xcconfig"; path = "Pods/Target Support Files/Pods-Chat App/Pods-Chat App.release.xcconfig"; sourceTree = "<group>"; };
 		B791ACF867CC1FB2874FA91A /* Pods-Chat App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chat App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Chat App/Pods-Chat App.debug.xcconfig"; sourceTree = "<group>"; };
 		C978EB02E618F3D9CD10F8AA /* Pods_Chat_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chat_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,6 +82,7 @@
 		83FCE4A020D940E700B37D56 /* Chat App */ = {
 			isa = PBXGroup;
 			children = (
+				83FCE4B320D9600A00B37D56 /* Supporting Files */,
 				83FCE4A120D940E700B37D56 /* AppDelegate.swift */,
 				83FCE4A320D940E700B37D56 /* ViewController.swift */,
 				83FCE4A520D940E700B37D56 /* Main.storyboard */,
@@ -86,6 +91,16 @@
 				83FCE4AD20D940E900B37D56 /* Info.plist */,
 			);
 			path = "Chat App";
+			sourceTree = "<group>";
+		};
+		83FCE4B320D9600A00B37D56 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				83FCE4B620D9605400B37D56 /* SWRevealViewController.h */,
+				83FCE4B520D9605400B37D56 /* SWRevealViewController.m */,
+				83FCE4B420D9605300B37D56 /* Chat App-Bridging-Header.h */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,6 +137,7 @@
 				TargetAttributes = {
 					83FCE49D20D940E700B37D56 = {
 						CreatedOnToolsVersion = 9.4;
+						LastSwiftMigration = 0940;
 					};
 				};
 			};
@@ -208,6 +224,7 @@
 			files = (
 				83FCE4A420D940E700B37D56 /* ViewController.swift in Sources */,
 				83FCE4A220D940E700B37D56 /* AppDelegate.swift in Sources */,
+				83FCE4B720D9605500B37D56 /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,6 +369,7 @@
 			baseConfigurationReference = B791ACF867CC1FB2874FA91A /* Pods-Chat App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D4HU6PM93L;
 				INFOPLIST_FILE = "Chat App/Info.plist";
@@ -361,6 +379,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ConorMolloy.Chat-App-CM";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Chat App/Supporting Files/Chat App-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -371,6 +391,7 @@
 			baseConfigurationReference = 9F63A8EF1345111866E6AD23 /* Pods-Chat App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D4HU6PM93L;
 				INFOPLIST_FILE = "Chat App/Info.plist";
@@ -380,6 +401,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ConorMolloy.Chat-App-CM";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Chat App/Supporting Files/Chat App-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
